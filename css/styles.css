@@ -114,6 +114,31 @@ section {
     text-decoration: none;
 }
 
+.top {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  background: #f5f5f5;
+  color: #444;
+  cursor: pointer;
+  border-radius: 30px;
+  display: none;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.top:hover {
+  background: #e9ebec;
+}
+
+.top-show {
+  display: block;
+}
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */

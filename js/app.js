@@ -18,6 +18,7 @@
  * 
 */
 var navbar = document.getElementById('navbar__list');
+var backToTopButton = document.querySelector('.top');
 
 /**
  * End Global Variables
@@ -48,6 +49,25 @@ function isInRange(elem) {
         bounding.bottom <= (document.documentElement.clientHeight + 300) &&
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+}
+
+function trackScroll() {
+    var scrolled = window.pageYOffset;
+    var coords = document.documentElement.clientHeight;
+
+    if (scrolled > coords) {
+        backToTopButton.classList.add('top-show');
+    }
+    if (scrolled < coords) {
+        backToTopButton.classList.remove('top-show');
+    }
+}
+
+function backToTop() {
+    if (window.pageYOffset > 0) {
+        window.scrollBy(0, -80);
+        setTimeout(backToTop, 0);
+    }
 }
 
 
@@ -101,3 +121,6 @@ document.querySelectorAll('.menu__link').forEach(function (element) {
 //     element.addEventListener('click', activeClass(element.getAttribute("href").substring(1)));
 // });
 
+// Back to Top button
+window.addEventListener('scroll', trackScroll);
+backToTopButton.addEventListener('click', backToTop);
