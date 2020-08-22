@@ -58,7 +58,7 @@ function isInRange(elem) {
 */
 
 // build the nav
-for (let i = 1; i <= 3; i++) {
+for (let i = 1; i <= 4; i++) {
     var Child = document.createElement('li');
     Child.innerHTML = `<a href="#section${i}" id="section${i}Button" class="menu__link"> Section ${i} </a>`;
     navbar.appendChild(Child);
