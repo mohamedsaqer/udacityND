@@ -24,7 +24,7 @@ var navbar = document.getElementById('navbar__list');
  * Start Helper Functions
  * 
 */
-function activeClass (section) {
+function activeClass(section) {
     var isActive = document.querySelector('.your-active-class');
     if (isActive) {
         isActive.classList.remove("your-active-class");
@@ -48,7 +48,7 @@ function isInRange(elem) {
         bounding.bottom <= (document.documentElement.clientHeight + 300) &&
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-};
+}
 
 
 /**
@@ -58,7 +58,7 @@ function isInRange(elem) {
 */
 
 // build the nav
-for (let i =1; i <= 3; i++) {
+for (let i = 1; i <= 3; i++) {
     var Child = document.createElement('li');
     Child.innerHTML = `<a href="#section${i}" id="section${i}Button" class="menu__link"> Section ${i} </a>`;
     navbar.appendChild(Child);
@@ -71,7 +71,6 @@ var sectionn = document.querySelectorAll('section').forEach(function (element) {
         if (isInRange(element)) {
             activeClass(element.id)
             activeButton(element.id + 'Button')
-        } else {
         }
     }, false);
 });
