@@ -108,6 +108,12 @@ section {
     color: #fff;
 }
 
+.btn-link {
+    font-size: 1.2em;
+    color: #7ebca2;
+    text-decoration: none;
+}
+
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
